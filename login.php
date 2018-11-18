@@ -33,7 +33,7 @@ function validate($username, $password) {
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <h1> Welcome to the Meme Generator!</h1>
+        <h1> Welcome to Stack Overcard!</h1>
         
         <?php 
             if (isset($_POST['username'])) {
