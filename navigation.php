@@ -1,16 +1,37 @@
+</script>
+
 <nav>
-    <ul>
+    <div id="navbar" style="text-align:center; padding:10px; color: white; background-color:#37474F">
+        Stack Overcard
+    </div>
+    <div id="navbar">
         <?php 
     
             if (isset($_SESSION['user_id'])) {
-              echo '<li> <a href="index.php">Home</a> </li> '; 
-              echo '<li> <a href="logout.php">Logout</a></li>'; 
+              echo '<a href="index.php">Home</a>'; 
+              echo '<a href="logout.php">Logout</a>'; 
             }
             else  
-              echo '<li> <a href="login.php">Login</a></li>'; 
+              echo '<a href="login.php">Login</a>'; 
             
         ?>
         
-    </ul>
+    
+    </div>
     <div class="clear"></div>
 </nav>
+
+<script>
+window.onscroll = function() {stickyBar()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyBar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
