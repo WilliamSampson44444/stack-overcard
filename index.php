@@ -7,5 +7,6 @@
   <body>
     <?php include 'navigation.php' ?>
     <h1>Stack Overcard</h1>
+    
   </body>
 </html>

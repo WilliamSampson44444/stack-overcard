@@ -1,9 +1,6 @@
 </script>
 
 <nav>
-    <div id="navbar" style="text-align:center; padding:10px; color: white; background-color:#37474F">
-        Stack Overcard
-    </div>
     <div id="navbar">
         <?php 
     
