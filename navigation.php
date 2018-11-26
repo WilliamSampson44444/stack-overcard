@@ -1,19 +1,19 @@
-</script>
-
 <nav>
     <div id="navbar">
-        <?php 
-    
-            if (isset($_SESSION['user_id'])) {
-              echo '<a href="index.php">Home</a>'; 
-              echo '<a href="logout.php">Logout</a>'; 
-            }
-            else  
-              echo '<a href="login.php">Login</a>'; 
-            
-        ?>
+      <a href="javascript:void(0)" style="font-size:17px;cursor:pointer" onclick="openNav()"><i class="material-icons">menu</i></a>
+      
+      <?php 
+  
+          if (isset($_SESSION['user_id'])) {
+            echo '<a href="index.php<i class="material-icons">home</i></a>'; 
+            echo '<a href="logout.php">Logout</a>'; 
+          }
+          else  
+            echo '<a href="login.php"><i class="material-icons">person</i></a>'; 
         
-    
+        
+      ?>
+  
     </div>
     <div class="clear"></div>
 </nav>
