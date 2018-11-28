@@ -5,11 +5,11 @@
       <?php 
   
           if (isset($_SESSION['user_id'])) {
-            echo '<a href="index.php<i class="material-icons">home</i></a>'; 
-            echo '<a href="logout.php">Logout</a>'; 
+            echo '<a href="dbCalls/index.php<i class="material-icons">home</i></a>'; 
+            echo '<a href="dbCalls/logout.php">Logout</a>'; 
           }
           else  
-            echo '<a href="login.php"><i class="material-icons">person</i></a>'; 
+            echo '<a href="dbCalls/login.php"><i class="material-icons">person</i></a>'; 
         
         
       ?>
