@@ -19,7 +19,7 @@ function validate($username, $password) {
         // login successful
         $_SESSION['user_id'] = $records[0]['user_id']; 
         $_SESSION['username'] = $records[0]['username']; 
-        header('Location: index.php');
+        header('Location: ../index.php');
     }  else {
         echo "<div class='error'>Username and password are invalid </div>"; 
     }
