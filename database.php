@@ -7,15 +7,15 @@
 function getDatabaseConnection() {
     if (strpos($_SERVER['SERVER_NAME'], "c9users") !== false) {
         // running on cloud9
-        $host = "us-cdbr-iron-east-01.cleardb.net";
-        $username = "b5c8793353d2d0";
-        $password = "40062f6e"; // best practice: define this in a separte file
-        $dbname = "heroku_4646478069544f6"; 
+        $host = "tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $username = "f89d4v70t1c7x38p";
+        $password = "f3qapnhmsbtvmehi"; // best practice: define this in a separte file
+        $dbname = "q04pglwa9t4hfqjm"; 
     } else {
-        $host = "us-cdbr-iron-east-01.cleardb.net";
-        $username = "b5c8793353d2d0";
-        $password = "40062f6e";
-        $dbname = "heroku_4646478069544f6"; 
+        $host = "tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $username = "f89d4v70t1c7x38p";
+        $password = "f3qapnhmsbtvmehi"; 
+        $dbname = "q04pglwa9t4hfqjm"; 
     }
     // Create connection
     $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
