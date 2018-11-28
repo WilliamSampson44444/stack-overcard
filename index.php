@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php 
-  include 'navigation.php'; 
   include 'sidebar.php';
 ?>
 
@@ -17,7 +16,11 @@
     <!--For content to be pushed by the sidebar, it MUST be in the div with the id "main". -->
     <!--Pushing the body tag doesn't seem to work >:( -->
     <div id="main">
-      <h1>Stack Overcard</h1>
+      <!-- By including navbar in main, navbar can also be pushed by the sidebar rather than being overlayed -->
+      <?php include 'navigation.php'; ?>
+      <div id="content">
+        <h1>Stack Overcard</h1>
+      </div>
     </div>
   </body>
 </html>

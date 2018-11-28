@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  padding: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   background-color: #f1f1f1;
-  padding: 30px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -86,10 +87,13 @@ body {
 
 #main {
     transition: margin-left .5s;
-    padding: 16px;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+#content{
+  padding: 20px;
 }
