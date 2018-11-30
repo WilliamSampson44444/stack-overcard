@@ -5,12 +5,13 @@
       <?php 
   
           if (isset($_SESSION['user_id'])) {
-            echo '<a href="dbCalls/index.php<i class="material-icons">home</i></a>'; 
+            echo '<a href="index.php"><i class="material-icons">home</i></a>'; 
             echo '<a href="dbCalls/logout.php">Logout</a>'; 
           }
-          else  
+          else{ 
+            echo '<a href="index.php"><i class="material-icons">home</i></a>'; 
             echo '<a href="dbCalls/login.php"><i class="material-icons">person</i></a>'; 
-        
+          }
         
       ?>
   
