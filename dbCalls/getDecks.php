@@ -1,5 +1,5 @@
 <?php
-    include database.php;
+    include 'database.php';
     
     $sql = "SELECT name from decks"; 
     $statement = $dbConn->prepare($sql); 
