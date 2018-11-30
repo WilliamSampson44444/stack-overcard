@@ -1,6 +1,6 @@
 var script = document.createElement('script');
  
-script.src = '//code.jquery.com/jquery-1.11.0.min.js';
+script.src="https://code.jquery.com/jquery-3.3.1.min.js";
 document.getElementsByTagName('head')[0].appendChild(script); 
 
 function openNav() {
