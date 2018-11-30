@@ -4,6 +4,7 @@
   <a href="#">CSS</a>
   <a href="#">PHP</a>
   <a href="#">JS</a>-->
+  <br>
   <?php
     include 'dbCalls/database.php';
     $dbConn = getDatabaseConnection();
