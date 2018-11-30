@@ -13,13 +13,13 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: #37474F;
+  background-color: #455a64;
 }
 
 #navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -32,12 +32,12 @@ body {
 }
 
 #navbar a:hover {
-  background-color: #455A64;
+  background-color: #718792;
   color: white;
 }
 
 #navbar a.active {
-  background-color: #607D8B;
+  background-color: #1c313a;
   color: white;
 }
 
@@ -58,7 +58,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #37474F;
+    background-color: #455a64;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -74,11 +74,11 @@ body {
 }
 
 .sidenav a:hover{
-    background-color: #455A64;
+    background-color: #718792;
 }
 
 .sidenav .closebtn:hover {
-    background-color: #37474F;
+    background-color: #455a64;
 }
 
 .sidenav .closebtn {
@@ -101,3 +101,4 @@ body {
 #content{
   padding: 20px;
 }
+

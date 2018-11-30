@@ -1,7 +1,7 @@
 <nav>
     <div id="navbar">
       <a href="javascript:void(0)" style="font-size:17px;cursor:pointer" onclick="openNav()"><i class="material-icons">menu</i></a>
-      
+      <a href="index.php"><i class="material-icons">home</i></a>
       <?php 
   
           if (isset($_SESSION['user_id'])) {
