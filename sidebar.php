@@ -14,7 +14,7 @@
     $records = $statement->fetchAll();
     
     foreach ($records as $record){
-        echo "<a href=" . $record . ">" . $record . "</a>";
+        echo "<a href=" . $record["name"] . ">" . $record["name"] . "</a>";
     }
   ?>
 </div>
