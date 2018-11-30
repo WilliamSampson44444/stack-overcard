@@ -1,7 +1,7 @@
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+var script = document.createElement('script');
+ 
+script.src="https://code.jquery.com/jquery-3.3.1.min.js";
+document.getElementsByTagName('head')[0].appendChild(script); 
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
