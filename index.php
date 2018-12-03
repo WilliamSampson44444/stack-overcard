@@ -2,7 +2,7 @@
 
 <?php 
   session_start();
-  include 'sidebar.php';
+  include_once 'sidebar.php';
 ?>
 
 <html>
@@ -22,7 +22,7 @@
     <!--Pushing the body tag doesn't seem to work >:( -->
     <div id="main">
       <!-- By including navbar in main, navbar can also be pushed by the sidebar rather than being overlayed -->
-      <?php include 'navigation.php'; ?>
+      <?php include_once 'navigation.php'; ?>
       <div id="content">
         <h1>Stack Overcard</h1>
       </div>

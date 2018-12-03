@@ -6,7 +6,7 @@
   <a href="#">JS</a>-->
   <br>
   <?php
-    include 'dbCalls/database.php';
+    include_once 'database.php';
     $dbConn = getDatabaseConnection();
     $sql = "SELECT name from decks"; 
     $statement = $dbConn->prepare($sql); 
