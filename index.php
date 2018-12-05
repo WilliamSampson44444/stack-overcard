@@ -2,7 +2,7 @@
 
 <?php 
   session_start();
-  include 'sidebar.php';
+  include_once 'sidebar.php';
 ?>
 
 <html>
@@ -14,7 +14,9 @@
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="functions.js"></script>
     
   </head>
   <body>
@@ -22,9 +24,9 @@
     <!--Pushing the body tag doesn't seem to work >:( -->
     <div id="main">
       <!-- By including navbar in main, navbar can also be pushed by the sidebar rather than being overlayed -->
-      <?php include 'navigation.php'; ?>
+      <?php include_once 'navigation.php'; ?>
       <div id="content">
-        <h1>Stack Overcard</h1>
+        <script>getDecks();</script>
       </div>
     </div>
   </body>

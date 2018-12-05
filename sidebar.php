@@ -1,12 +1,12 @@
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <span class="closebtn" onclick="closeNav()">&times;</span>
   <!--<a href="#">HTML</a>
   <a href="#">CSS</a>
   <a href="#">PHP</a>
   <a href="#">JS</a>-->
   <br>
   <?php
-    include 'dbCalls/database.php';
+    include_once 'database.php';
     $dbConn = getDatabaseConnection();
     $sql = "SELECT name from decks"; 
     $statement = $dbConn->prepare($sql); 
@@ -15,7 +15,7 @@
     $records = $statement->fetchAll();
     
     foreach ($records as $record){
-        echo "<a href=" . "deck". ".php?deck=" . $record["name"]  . ">" . $record["name"] . "</a>";
+        echo '<span id="' . $record['name'] . '" onclick="getCards(this.id)">' . $record['name'] . '</span>';
     }
   ?>
 </div>
