@@ -23,12 +23,12 @@ function getDecks(){
     });
 }
 
-function getCards(id){
+function getCards(deckName){
     $.ajax({
         url: 'getCards.php',
         type:'POST',
         dataType: 'text',
-        data: {id: id},
+        data: {deck: deckName},
         success: function(data)
         {
             $('#content').html(data);

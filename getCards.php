@@ -1,9 +1,11 @@
 <?php
     include_once 'database.php';
-    $id = $_POST['id'];
-    var_dump($id);
+    $deck = $_POST['deck'];
+    //var_dump($deck);
+    
     $dbConn = getDatabaseConnection();
-    $sql = "SELECT" . $id . "from cards"; 
+    $sql = "SELECT * FROM `cards` WHERE `deck` = '$deck'";
+    
     $statement = $dbConn->prepare($sql); 
 
     $statement->execute(); 
