@@ -46,6 +46,7 @@ body {
 #navbar {
   overflow: hidden;
   background-color: #455a64;
+  width:100%;
 }
 
 #navbar a {
@@ -121,3 +122,34 @@ body {
     margin-left: 50px;
 }
 
+.flex-wrapper{
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.decks {
+  text-align: center;
+  margin: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 5px 10px #888888;
+  position:relative;
+  width: 250px;
+  height: 250px;
+  background-color:white;
+  font-size: 25px;
+}
+
+#navTitle{
+  display: inline-block;
+  width: 85%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+}

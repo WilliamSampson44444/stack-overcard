@@ -1,8 +1,9 @@
 <?php
     include_once 'database.php';
-    
+    $id = $_POST['id'];
+    var_dump($id);
     $dbConn = getDatabaseConnection();
-    $sql = "SELECT * from decks"; 
+    $sql = "SELECT" . $id . "from cards"; 
     $statement = $dbConn->prepare($sql); 
 
     $statement->execute(); 
@@ -11,7 +12,7 @@
     echo '<div class="flex-wrapper">';
     foreach ($records as $record){
         //var_dump($record);
-        echo '<div class="decks" id ="' . $record['name'] . '" onclick="getCards()">' . $record['name'] . '</div>';
+        echo '<div class="cards" id ="' . $record['card_id'] . '">' . $record['question'] . '</div>';
     }
     echo '</div>';
 ?>

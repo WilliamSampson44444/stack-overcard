@@ -29,7 +29,7 @@ function stickyBar() {
           }
         
       ?>
-  
+      <div id="navTitle">Stack Overcard</div>
     </div>
     <div class="clear"></div>
 </nav>
