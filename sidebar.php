@@ -15,7 +15,7 @@
     $records = $statement->fetchAll();
     
     foreach ($records as $record){
-        echo '<span id="' . $record['name'] . '" onclick="getCards(this.id)">' . $record['name'] . '</span>';
+        echo '<span id="' . $record['name'] . '" onclick="getCards(this.id);">' . $record['name'] . '</span>';
     }
   ?>
 </div>

@@ -2,8 +2,6 @@
 <?php
 
 session_start(); 
-
-include_once 'sidebar.php';
 include_once 'database.php'; 
 
 function validate($username, $password) {
