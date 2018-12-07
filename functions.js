@@ -49,3 +49,29 @@ function getAnswers(cardName){
         } 
     });
 }
+
+function upvote(answer){
+    $.ajax({
+        url: 'upvote.php',
+        type:'PUT',
+        dataType: 'text',
+        data: {answer: answerId},
+        success: function()
+        {
+            
+        } 
+    });
+}
+
+function downvote(answer){
+    $.ajax({
+        url: 'downvote.php',
+        type:'PUT',
+        dataType: 'text',
+        data: {answer: answerId},
+        success: function()
+        {
+            
+        } 
+    });
+}
