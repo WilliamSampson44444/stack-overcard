@@ -136,24 +136,32 @@ body {
   text-align: center;
   margin: 50px;
   border: 1px solid;
-  border-radius: 25px;
   padding: 20px;
   box-shadow: 5px 10px #888888;
   position:relative;
   background-color:white;
   font-size: 25px;
+  width:150px;
+  height:150px;
+}
+
+.deckText{
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
 }
 
 .cards {
   text-align: center;
   margin: 50px;
   border: 1px solid;
-  border-radius: 25px;
   padding: 20px;
   box-shadow: 5px 10px #888888;
   position:relative;
   background-color:white;
   font-size: 25px;
+  width:150px;
+  height:150px;
 }
 
 #navTitle{
