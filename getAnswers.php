@@ -11,5 +11,10 @@
     $statement->execute(); 
     $records = $statement->fetchAll();
     
-    echo json_encode($records);
+    echo '<div class="flex-wrapper">';
+    foreach ($records as $record){
+        //var_dump($record);
+        echo '<div class="answers" id ="' . $record['answer_id'] . '>Score: ' . $record['rating'] . '<br>' . $record['answer'] . '</div>';
+    }
+    echo '</div>';
 ?>

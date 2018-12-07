@@ -45,7 +45,7 @@ function getAnswers(cardName){
         success: function(data)
         {
             console.log(data);
-            $('#content').html(data);
+            $('.modal-body').html(data);
         } 
     });
 }
