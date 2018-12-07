@@ -14,7 +14,7 @@
     echo '<div class="flex-wrapper">';
     foreach ($records as $record){
         //var_dump($record);
-        echo '<div class="cards" id ="' . $record['card_id'] . '">' . $record['question'] . '</div>';
+        echo '<button type="button" class="cards btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id ="' . $record['card_id'] . '" onclick="getAnswers(this.id)">' . $record['question'] . '</button>';
     }
     echo '</div>';
 ?>

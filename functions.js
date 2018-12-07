@@ -35,3 +35,17 @@ function getCards(deckName){
         } 
     });
 }
+
+function getAnswers(cardName){
+    $.ajax({
+        url: 'getAnswers.php',
+        type:'POST',
+        dataType: 'text',
+        data: {card: cardName},
+        success: function(data)
+        {
+            console.log(data);
+            $('#content').html(data);
+        } 
+    });
+}
