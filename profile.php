@@ -2,15 +2,6 @@
 <?php 
   session_start();
   include 'sidebar.php';
-  
-      
-    if(empty($_SESSION['user'])){
-        //Redirect them to the login page.
-        header("Location: login.php");
-        
-        //Ends this script when if is hit so profile cannot be accessed without login credentials
-        die("Redirecting to login.php");
-    }
 ?>
 <html lang="en">
   <head>

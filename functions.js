@@ -75,3 +75,15 @@ function downvote(answer){
         } 
     });
 }
+
+function login(loginInfo){
+    $.ajax({
+        url: 'login.php',
+        type:'POST',
+        dataType: 'text',
+        data: {loginInfo: loginInfo},
+        success: function(){
+            
+        } 
+    });
+}

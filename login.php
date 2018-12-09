@@ -2,7 +2,13 @@
 <?php
 
 session_start(); 
-include_once 'database.php'; 
+include_once 'database.php';
+
+$loginInfo = $_POST['loginInfo'];
+var_dump($loginInfo);
+$username = $loginInfo[0];
+$password = $loginInfo[1];
+validate($username, $password);
 
 function validate($username, $password) {
     global $dbConn; 
@@ -18,45 +24,10 @@ function validate($username, $password) {
         // login successful
         $_SESSION['user_id'] = $records[0]['user_id']; 
         $_SESSION['username'] = $records[0]['username']; 
-        header('Location: index.php');
+        header('Location: profile.php');
     }  else {
-        echo "<div class='error'>Username and password are invalid </div>"; 
+        header('Location: index.php');
     }
 }
 
 ?>
-
-<html>
-    <head>
-        <title>Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="main">
-            <?php include_once 'navigation.php'; ?>
-            <div id="content">
-                <div id="authBox">
-                    <h4>Login</h4>
-                    
-                    <?php 
-                        if (isset($_POST['username'])) {
-                            validate($_POST['username'], $_POST['password']);  
-                        }
-                    ?>
-                    
-                    <form method="POST">
-                        Username: <input type="text" name="username"></input> <br/>
-                        Password: <input type="password" name="password"></input> <br/>
-                        <br><input type="submit" value="Login">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
