@@ -33,8 +33,10 @@
         echo '<div class="flex-wrapper" id="innerFlex">';
             echo '<div class="flex-wrapper" id="scoreFlex">';
                 //put upvote div here
-                echo '<div class="upvote" onclick="upvote();"><i class="fa fa-arrow-up" style="font-size:36px;color:grey;"></i></div>';
-                echo '<div class="answers" id ="score' . $record['answer_id'] . '"> ' . $record['rating'] . '</div>';
+
+                echo '<div class="upvote" onclick="upvote('. $record['card_id'] .', '. $record['answer_id'] .');"><i class="fa fa-arrow-up" style="font-size:36px;color:grey;"></i></div>';
+                echo '<div class="answers" id ="' . $record['answer_id'] . '"> Score: ' . $record['rating'] . '</div>';
+
                 //put downvote div here
                 echo '<div class="downvote" onclick="downvote();"><i class="fa fa-arrow-down" style="font-size:36px;color:grey;"></i></div>';
             echo '</div>';
