@@ -42,10 +42,10 @@ body {
   padding: 0px;
   text-align: center;
 }
-
-#navbar {
-  overflow: hidden;
+/*
+.navbar {
   background-color: #455a64;
+  overflow: hidden;
   width:100%;
 }
 
@@ -72,6 +72,18 @@ body {
 #navbar a.active {
   background-color: #1c313a;
   color: white;
+}*/
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+.navbar-toggle {
+    z-index:3;
 }
 
 .sticky{
@@ -156,14 +168,14 @@ body {
   height:250px;
 }
 
-#navTitle{
-  display: inline-block;
-  width: 85%;
-  color: white;
+#title{
+  float: none;
   text-align: center;
-  text-decoration: none;
-  font-size: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction:row;
 }
+
 
 .deckText{
   font-size: 36px;
@@ -175,4 +187,11 @@ body {
   font-size: 24px;
   word-wrap: break-word;
   white-space: normal;
+}
+
+#profile{
+  width:100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
 }
