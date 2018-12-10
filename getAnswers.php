@@ -24,7 +24,7 @@
     echo '<form method="POST" id="new-comment">
         <p>Have a better answer? Submit it here:</p>
         <textarea id="comment" rows="4" cols="50"></textarea><br>
-        <button type="button" id="submit-comment" onclick="submitAnswer(document.getElementById("comment").value);">Submit</button>
+        <button type="button" id="submit-comment" onclick="submitAnswer(document.getElementById("comment").value, document.getElementById("card_id").value);">Submit</button>
       </form><br>';
       
     echo '<div class="flex-wrapper" id="outerFlex">';
