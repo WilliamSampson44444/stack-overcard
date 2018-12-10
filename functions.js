@@ -50,27 +50,25 @@ function getAnswers(cardName){
     });
 }
 
-function upvote(answer){
+function upvote(cardID, answerID){
     $.ajax({
         url: 'upvote.php',
-        type:'PUT',
+        type:'POST',
         dataType: 'text',
-        data: {answer: answerId},
-        success: function()
-        {
-            
+        data: {cardID: cardID, answerID: answerID},
+        success: function(data){
+            $('#answerID').html(data)
         } 
     });
 }
 
-function downvote(answer){
+function downvote(cardID, answerID){
     $.ajax({
         url: 'downvote.php',
-        type:'PUT',
+        type:'POST',
         dataType: 'text',
-        data: {answer: answerId},
-        success: function()
-        {
+        data: {cardID: cardID, answerID: answerID},
+        success: function(){
             
         } 
     });
