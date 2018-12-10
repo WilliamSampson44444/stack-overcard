@@ -23,8 +23,8 @@
     
     echo '<form method="POST" id="new-comment">
         <p>Have a better answer? Submit it here:</p>
-        <textarea name="comment" rows="4" cols="50"></textarea><br>
-        <button id="submit-comment">Submit</button>
+        <textarea id="comment" rows="4" cols="50"></textarea><br>
+        <button type="button" id="submit-comment" onclick="submitAnswer(document.getElementById("comment").value);">Submit</button>
       </form><br>';
       
     echo '<div class="flex-wrapper" id="outerFlex">';
@@ -34,7 +34,7 @@
             echo '<div class="flex-wrapper" id="scoreFlex">';
                 //put upvote div here
                 echo '<div class="upvote" onclick="upvote();"><i class="fa fa-arrow-up" style="font-size:36px;color:grey;"></i></div>';
-                echo '<div class="answers" id ="score' . $record['answer_id'] . '"> Score: ' . $record['rating'] . '</div>';
+                echo '<div class="answers" id ="score' . $record['answer_id'] . '"> ' . $record['rating'] . '</div>';
                 //put downvote div here
                 echo '<div class="downvote" onclick="downvote();"><i class="fa fa-arrow-down" style="font-size:36px;color:grey;"></i></div>';
             echo '</div>';
