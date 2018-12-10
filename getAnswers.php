@@ -11,6 +11,22 @@
     $statement->execute(); 
     $records = $statement->fetchAll();
     
+    $sql = "SELECT * FROM `cards` WHERE `card_id` = '$card'";
+    
+    $statement = $dbConn->prepare($sql); 
+
+    $statement->execute(); 
+    $card_info = $statement->fetchAll();
+    
+    echo '<div id="card_id" hidden>' . $card .'</div>';
+    echo '<div id="question"><h3>' . $card_info[0]['question'] . '</h3></div>';
+    
+    echo '<form method="POST" id="new-comment">
+        <p>Have a better answer? Submit it here:</p>
+        <textarea name="comment" rows="4" cols="50"></textarea><br>
+        <button id="submit-comment">Submit</button>
+      </form><br>';
+      
     echo '<div class="flex-wrapper" id="outerFlex">';
     foreach ($records as $record){
         //var_dump($record);
