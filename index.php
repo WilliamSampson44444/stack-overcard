@@ -45,7 +45,14 @@
               </button>
             </div>
             <div class="modal-body">
-              
+              <form method="POST">
+                <p>Have a better answer? Submit it here:</p>
+                <input type="textbox" name="comment">
+                <button id="submit-comment"></button>
+              </form>
+              <div id="modal-answers">
+                
+              </div>
             </div>
           </div>
         </div>
