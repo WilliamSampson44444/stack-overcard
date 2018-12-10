@@ -46,7 +46,7 @@ function getAnswers(cardName){
         data: {card: cardName},
         success: function(data)
         {
-            console.log(data);
+            //console.log(data);
             $('.modal-body').html(data);
         } 
     });
@@ -80,21 +80,18 @@ function downvote(cardID, answerID){
     });
 }
 
-$(document).ready(function(){
-    $('#new-comment').submit( function(event) {
-        event.preventDefault();
-        
-        var submission = [$('comment').serialize(), $('card_id').val()];
-        
-        $.ajax({
-            url: 'submitAnswer.php',
-            type: 'put',
-            dataType: 'json',
-            data: submission,
-            contentType: "application/json",
-            success: function(data) {
-                console.log(data);
-            }
-        });
+function submitAnswer(comment){
+    
+    console.log(answer, $('card_id').val());
+    $.ajax({
+        url: 'submitAnswer.php',
+        type: 'post',
+        dataType: 'json',
+        data: {comment: comment, card_id: $('#card_id').val()},
+        contentType: "application/json",
+        success: function(data) {
+            console.log(data);
+        }
     });
-});
+    return false;
+}

@@ -6,14 +6,14 @@ $dbConn = getDatabaseConnection();
 
 $dbConn = getDatabaseConnection(); 
     
-$submission = $_GET['submission'];
-var_dump($submission);
-$answer = $submission[0];
-$card_id = $submission[1];
+$answer = $_POST['comment'];
+
+$card_id = $_POST['card_id'];
     
-$sql = "INSERT INTO `answers` (`answer_id`, `card_id`, `answer`, `user_id`, `rating`) VALUES (NULL, '$card_id', ':answer', '" . $_SESSION['user_id'] . "', '0')"; 
+$sql = "INSERT INTO `answers` (`answer_id`, `card_id`, `answer`, `user_id`, `rating`) 
+    VALUES (NULL, '$card_id', ':answer', '" . $_SESSION['user_id'] . "', '0')"; 
 $statement = $dbConn->prepare($sql); 
 $statement->execute(array(':answer' => $answer));
 
-$records = $statement->fetchAll(); 
+var_dump($sql);
 ?>
