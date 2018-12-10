@@ -11,10 +11,17 @@
     $statement->execute(); 
     $records = $statement->fetchAll();
     
-    echo '<div class="flex-wrapper">';
+    echo '<div class="flex-wrapper" id="outerFlex">';
     foreach ($records as $record){
         //var_dump($record);
-        echo '<div class="answers" id ="' . $record['answer_id'] . '"> Score: ' . $record['rating'] . '<br>' . $record['answer'] . '</div>';
+        echo '<div class="flex-wrapper" id="innerFlex">';
+            echo '<div class="flex-wrapper" id="scoreFlex">';
+                //put upvote div here
+                echo '<div class="answers" id ="score' . $record['answer_id'] . '"> Score: ' . $record['rating'] . '</div>';
+                //put downvote div here
+            echo '</div>';
+            echo '<div id="answer' . $record['answer_id'] . '">' . $record['answer'] . '</div>';
+        echo '</div>';
     }
     echo '</div>';
 ?>

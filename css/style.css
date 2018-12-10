@@ -172,3 +172,17 @@ body {
   flex-direction:column;
   align-items: center;
 }
+
+.flex-wrapper #outerFlex{
+    flex-direction: column;
+}
+
+.flex-wrapper #innerFlex{
+    flex-direction: row;
+}
+
+.flex-wrapper #scoreFlex{
+    flex-direction: column;
+}
+
+
