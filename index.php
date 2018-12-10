@@ -45,10 +45,10 @@
               </button>
             </div>
             <div class="modal-body">
-              <form method="POST">
+              <form method="POST" id="comment">
                 <p>Have a better answer? Submit it here:</p>
                 <input type="textbox" name="comment">
-                <button id="submit-comment"></button>
+                <button id="submit-comment">Submit</button>
               </form>
               <div id="modal-answers">
                 

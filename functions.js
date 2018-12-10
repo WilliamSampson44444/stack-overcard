@@ -75,3 +75,17 @@ function downvote(answer){
         } 
     });
 }
+
+$(document).ready(function(){
+    $('#submit-comment').click( function() {
+        $.ajax({
+            url: 'submitAnswer.php',
+            type: 'post',
+            dataType: 'json',
+            data: $('#comment').serialize(),
+            success: function(data) {
+            
+            }
+        });
+    });
+});
