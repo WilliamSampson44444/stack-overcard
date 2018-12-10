@@ -183,6 +183,7 @@ body {
 
 .flex-wrapper #scoreFlex{
     flex-direction: column;
+    text-align: center;
 }
 
 
