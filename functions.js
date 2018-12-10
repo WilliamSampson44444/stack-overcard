@@ -1,3 +1,5 @@
+/*global $*/
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -45,7 +47,7 @@ function getAnswers(cardName){
         success: function(data)
         {
             console.log(data);
-            $('#modal-answers').html(data);
+            $('.modal-body').html(data);
         } 
     });
 }
@@ -77,14 +79,19 @@ function downvote(answer){
 }
 
 $(document).ready(function(){
-    $('#submit-comment').click( function() {
+    $('#new-comment').submit( function(event) {
+        event.preventDefault();
+        
+        var submission = [$('comment').serialize(), $('card_id').val()];
+        
         $.ajax({
             url: 'submitAnswer.php',
-            type: 'post',
+            type: 'put',
             dataType: 'json',
-            data: $('#comment').serialize(),
+            data: submission,
+            contentType: "application/json",
             success: function(data) {
-            
+                console.log(data);
             }
         });
     });
