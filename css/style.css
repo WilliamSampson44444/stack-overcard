@@ -17,20 +17,26 @@ body {
 #authBox {
   text-align: center;
   margin: auto;
-  border: 1px solid;
-  border-radius: 25px;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
   box-shadow: 5px 10px #888888;
   position:relative;
   top:25%;
   width: 20%;
   height: 50%;
-  background-color:white;
+  color: white;
+  background-color:#286090;
   font-size: 25px;
 }
 
 #authBox input{
   font-size: 20px;
+  background-color:#286090;
+  padding: 10px;
+  width: 80%;
+}
+
+#btn{
+  border: 1px solid white;
 }
 
 #authBox h4{
@@ -42,37 +48,6 @@ body {
   padding: 0px;
   text-align: center;
 }
-/*
-.navbar {
-  background-color: #455a64;
-  overflow: hidden;
-  width:100%;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar i{
-  color: white;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #718792;
-  color: white;
-}
-
-#navbar a.active {
-  background-color: #1c313a;
-  color: white;
-}*/
 
 .navbar-brand
 {
@@ -104,7 +79,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #455a64;
+  background-color: #F8F8F8;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -114,17 +89,19 @@ body {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: white;
+  color: #333333;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav span:hover{
-  background-color: #718792;
+  background-color: #eceff1;
+  color: #000000;
+  transition: .2s;
 }
 
-.sidenav .closebtn:hover {
-    background-color: #455a64;
+.sidenav .closebtn:hover{
+  background-color: #F8F8F8;
 }
 
 .sidenav .closebtn {
