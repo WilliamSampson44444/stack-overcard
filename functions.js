@@ -61,6 +61,7 @@ function upvote(cardID, answerID){
         data: {cardID: cardID, answerID: answerID},
         
         success: function(data){
+            // debug statement
              console.log('running ');
             var aID = answerID;
             $('#answer' + aID).html(data);
@@ -76,6 +77,8 @@ function downvote(cardID, answerID){
         dataType: 'text',
         data: {cardID: cardID, answerID: answerID},
         success: function(data){
+            // debug statement
+            console.log('running');
             var aID = answerID;
             $('#answer' + aID).html(data);
             $('#downvote' + aID).html('<i class="fa fa-arrow-up" style="font-size:36px;color:blue;"></i>');
