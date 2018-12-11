@@ -4,24 +4,34 @@
     $answerID = $_POST['answerID'];
     
     $dbConn = getDatabaseConnection();
-    $sql = "SELECT * FROM `cards` c JOIN `answers` a  ON c.card_id = a.card_id WHERE a.answer_id = $answerID";
+    $sql = "SELECT * FROM `answers` WHERE `card_id` = $cardID AND `answer_id` = $answerID";
+    
+    // $sql = "SELECT * FROM `cards` c JOIN `answers` a  ON c.card_id = a.card_id WHERE a.answer_id = $answerID";
     
     $statement = $dbConn->prepare($sql); 
 
     $statement->execute(); 
     $records = $statement->fetchAll();
-    $rating = $records['rating'];
-    $rating += 1;
+    $rating = $records[0]['rating'];
     
-    $sql = "UPDATE `answers` SET `rating`= $rating FROM
-    ( 
-        SELECT * FROM `cards` c JOIN `answers` a  ON c.card_id = a.card_id WHERE a.answer_id = $answerID
-    )
-    WHERE 1";
+    (int)$rating;
+    $rating += 1;
+    (int)$answerID;
+    (int)$cardID;
+    
+    $sql =     "UPDATE `answers` SET `rating` = $rating WHERE `answer_id` = 1 AND `card_id` = 1";
+
+    
+    // "UPDATE `answers` SET `rating`= $rating FROM
+    // ( 
+    //     SELECT * FROM `cards` c JOIN `answers` a  ON c.card_id = a.card_id WHERE a.answer_id = $answerID
+    // )
+    // WHERE 1";
+    
     
     $statement = $dbConn->prepare($sql); 
     $statement->execute(); 
     
-    echo $rating;
+   echo $rating;
     
 ?>

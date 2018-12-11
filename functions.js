@@ -53,12 +53,15 @@ function getAnswers(cardName){
 }
 
 function upvote(cardID, answerID){
+    console.log('checking if this is passed ');
     $.ajax({
         url: 'upvote.php',
         type:'POST',
         dataType: 'text',
         data: {cardID: cardID, answerID: answerID},
+        
         success: function(data){
+             console.log('running ');
             var aID = answerID;
             $('#answer' + aID).html(data);
             $('#upvote' + aID).html('<i class="fa fa-arrow-up" style="font-size:36px;color:orange;"></i>');

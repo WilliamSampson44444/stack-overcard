@@ -36,9 +36,11 @@
         echo '<div class="flex-wrapper" id="innerFlex">';
             echo '<div class="flex-wrapper" id="scoreFlex">';
                 if (isset($_SESSION['user_id'])){ //logged in = can vote
+                    // card id identifies specific card
+                    // answer id is the specific answer in the modal 
                     echo '<div class="upvote" id="upvote' . $record['answer_id'] . '" onclick="upvote('. $record['card_id'] .', '. $record['answer_id'] .');"><i class="fa fa-arrow-up" style="font-size:36px;color:grey;"></i></div>';
                     echo '<div class="answers" id ="answer' . $record['answer_id'] . '">' . $record['rating'] . '</div>';
-                    echo '<div class="downvote" id="upvote' . $record['answer_id'] . '" onclick="downvote();"><i class="fa fa-arrow-down" style="font-size:36px;color:grey;"></i></div>';
+                    echo '<div class="downvote" id="downvote' . $record['answer_id'] . '" onclick="downvote('. $record['card_id'] .', '. $record['answer_id'].');"><i class="fa fa-arrow-down" style="font-size:36px;color:grey;"></i></div>';
                 }else{
                     echo '<div class="answers" id ="answer' . $record['answer_id'] . '">' . $record['rating'] . '</div>';
                 }
