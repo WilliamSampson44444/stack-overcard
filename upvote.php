@@ -19,7 +19,7 @@
     (int)$answerID;
     (int)$cardID;
     
-    $sql =     "UPDATE `answers` SET `rating` = $rating WHERE `answer_id` = 1 AND `card_id` = 1";
+    $sql =     "UPDATE `answers` SET `rating` = $rating WHERE `answer_id` = $answerID AND `card_id` = $cardID";
 
     
     // "UPDATE `answers` SET `rating`= $rating FROM
