@@ -97,7 +97,7 @@ function submitAnswer(){
         url: 'submitAnswer.php',
         type: 'put',
         //dataType: 'json',
-        data: JSON.stringify(data),
+        data: data,
         
         //contentType: "application/json",
 
