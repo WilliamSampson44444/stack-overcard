@@ -3,11 +3,8 @@ include_once 'database.php';
 session_start();
 
 $dbConn = getDatabaseConnection();
-
-$dbConn = getDatabaseConnection(); 
     
 $answer = $_POST['comment'];
-
 $card_id = $_POST['card_id'];
     
 $sql = "INSERT INTO `answers` (`answer_id`, `card_id`, `answer`, `user_id`, `rating`) 

@@ -91,8 +91,8 @@ function submitAnswer(comment){
     console.log(answer, $('card_id').val());
     $.ajax({
         url: 'submitAnswer.php',
-        type: 'post',
-        dataType: 'json',
+        type: 'POST',
+        dataType: 'JSON',
         data: {comment: comment, card_id: $('#card_id').val()},
         contentType: "application/json",
         success: function(data) {
