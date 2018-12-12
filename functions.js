@@ -95,7 +95,7 @@ function submitAnswer(){
     var data = {comment: $('#comment').val(), card_id: document.getElementById("card_id").innerHTML};
     $.ajax({
         url: 'submitAnswer.php',
-        type: 'put',
+        type: 'POST',
         //dataType: 'json',
         data: data,
         
