@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: tj5iv8piornf713y.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
--- Generation Time: Dec 10, 2018 at 10:41 PM
+-- Generation Time: Dec 12, 2018 at 08:18 PM
 -- Server version: 5.7.23-log
 -- PHP Version: 5.5.9-1ubuntu4.22
 
@@ -43,7 +43,13 @@ INSERT INTO `cards` (`card_id`, `deck`, `question`) VALUES
 (2, 'HTML', 'HTML is typically rendered in what kind of program'),
 (3, 'CSS', 'How are multiple styles separated?'),
 (4, 'CSS', 'How do you determine CSS precedence?'),
-(5, 'HTML', 'What is the HTML attribute required to identify an input on the server?');
+(5, 'HTML', 'What is the HTML attribute required to identify an input on the server?'),
+(6, 'PHP', 'What is the syntax for creating a variable in PHP?'),
+(7, 'PHP', 'Are function names case sensitive in PHP?'),
+(8, 'JS', 'What is the difference between null and undefined?'),
+(9, 'JS', 'What “Truthy / Falsey”?'),
+(10, 'JS', 'How do you declare an empty array?'),
+(11, 'JS', 'What is the name of the object populated by the browser’s JavaScript engine automatically that repre');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +69,7 @@ ALTER TABLE `cards`
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
