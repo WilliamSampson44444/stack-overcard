@@ -3,7 +3,7 @@ include_once 'database.php';
 session_start();
 
 $dbConn = getDatabaseConnection();
-
+var_dump($_POST);
     
 $sql = "INSERT INTO `answers` (`answer_id`, `card_id`, `answer`, `user_id`, `rating`) 
     VALUES (NULL, '".$_POST['card_id']."', :answer, '" . $_SESSION['user_id'] . "', '0')"; 
