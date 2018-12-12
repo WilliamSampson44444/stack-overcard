@@ -86,18 +86,24 @@ function downvote(cardID, answerID){
     });
 }
 
-function submitAnswer(comment){
+function submitAnswer(){
     
-    console.log(answer, $('card_id').val());
+    console.log($('#comment').val(), document.getElementById("card_id").innerHTML);
+    var data = {comment: $('#comment').val(), card_id: document.getElementById("card_id").innerHTML};
     $.ajax({
         url: 'submitAnswer.php',
-        type: 'post',
-        dataType: 'json',
-        data: {comment: comment, card_id: $('#card_id').val()},
-        contentType: "application/json",
+        type: 'put',
+        //dataType: 'json',
+        data: JSON.stringify(data),
+        
+        //contentType: "application/json",
         success: function(data) {
             console.log(data);
+        },
+        complete: function(data,status) { //optional, used for debugging purposes
+           alert(status);
         }
     });
+    getAnswers(document.getElementById("card_id").innerHTML);
     return false;
 }
