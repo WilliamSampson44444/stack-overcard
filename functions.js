@@ -3,12 +3,15 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    document.getElementsByClassName("closebtn")[0].style.cursor = "pointer";
+
     //document.getElementsByTagName("body").style.marginLeft= "250";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+    document.getElementsByClassName("closebtn")[0].style.cursor = "pointer";
     //document.getElementsByTagName("body").style.marginLeft= "0";
 }
 
@@ -81,7 +84,7 @@ function downvote(cardID, answerID){
             console.log('running');
             var aID = answerID;
             $('#answer' + aID).html(data);
-            $('#downvote' + aID).html('<i class="fa fa-arrow-up" style="font-size:36px;color:blue;"></i>');
+            $('#downvote' + aID).html('<i class="fa fa-arrow-down" style="font-size:36px;color:blue;"></i>');
         } 
     });
 }

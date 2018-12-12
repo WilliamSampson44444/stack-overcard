@@ -24,7 +24,7 @@
     (int)$answerID;
     (int)$cardID;
     // updates the rating in the database. 
-    $sql =     "UPDATE `answers` SET `rating` = $rating WHERE `answer_id` = $answerID AND `card_id` = $cardID";
+    $sql = "UPDATE `answers` SET `rating` = $rating WHERE `answer_id` = $answerID AND `card_id` = $cardID";
     
     // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     // old SQL statement that was traded out     
