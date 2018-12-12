@@ -81,7 +81,7 @@ function downvote(cardID, answerID){
             console.log('running');
             var aID = answerID;
             $('#answer' + aID).html(data);
-            $('#downvote' + aID).html('<i class="fa fa-arrow-up" style="font-size:36px;color:blue;"></i>');
+            $('#downvote' + aID).html('<i class="fa fa-arrow-down" style="font-size:36px;color:blue;"></i>');
         } 
     });
 }
