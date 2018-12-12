@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php 
   session_start();
   include_once 'sidebar.php';
@@ -27,7 +26,6 @@
   </head>
   <body>
     <!--For content to be pushed by the sidebar, it MUST be in the div with the id "main". -->
-    <!--Pushing the body tag doesn't seem to work >:( -->
     <div id="main">
       <!-- By including navbar in main, navbar can also be pushed by the sidebar rather than being overlayed -->
       <?php include_once 'navigation.php'; ?>
