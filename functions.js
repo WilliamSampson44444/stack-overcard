@@ -96,11 +96,7 @@ function submitAnswer(){
     $.ajax({
         url: 'submitAnswer.php',
         type: 'POST',
-        dataType: 'text',
         data: data,
-        
-        //contentType: "application/json",
-
         success: function(data) {
             console.log(data);
         },
