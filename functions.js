@@ -3,12 +3,15 @@
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    document.getElementsByClassName("closebtn")[0].style.cursor = "pointer";
+
     //document.getElementsByTagName("body").style.marginLeft= "250";
 }
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+    document.getElementsByClassName("closebtn")[0].style.cursor = "pointer";
     //document.getElementsByTagName("body").style.marginLeft= "0";
 }
 
