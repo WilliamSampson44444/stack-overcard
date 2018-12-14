@@ -123,7 +123,7 @@ function getMyAnswers(cardName){
         success: function(data)
         {
             //console.log(data);
-            $('.modal-body').html(data);
+            $('.modal-body').hide().html(data).fadeIn(500);
         } 
     });
 }
