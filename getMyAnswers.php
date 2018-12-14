@@ -26,13 +26,30 @@
     echo '<div class="flex-wrapper" id="outerFlex">';
     foreach ($records as $record){
         //var_dump($record);
-        echo '<div class="flex-wrapper" id="innerFlex">';
+        /*echo '<div class="flex-wrapper" id="innerFlex">';
             echo '<div class="flex-wrapper" id="scoreFlex">';
                 echo '<div class="answers" id ="answer' . $record['answer_id'] . '">' . $record['rating'] . '</div>';
             echo '</div>';
             echo '<div id="answer' . $record['answer_id'] . '">' . $record['answer'] . '</div>';
-        echo '</div>';
-        echo '<button type="button" class="btn btn-danger" id="' . $record['answer_id'] . '" onclick="deleteComment(this.id)">Delete Comment</button>';
+        echo '</div>';*/
+        //echo '<button type="button" class="btn btn-danger" id="' . $record['answer_id'] . '" onclick="deleteComment(this.id)">Delete Comment</button>';
+        
+        echo '<div class="divTable">
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                        <div class="divTableCell">&nbsp;</div>
+                        <div class="divTableCell">&nbsp;</div>
+                    </div>
+                    <div class="divTableRow">
+                        <div class="divTableCell">&nbsp;<div class="answers" id ="answer' . $record['answer_id'] . '">' . $record['rating'] . '</div></div>
+                        <div class="divTableCell">&nbsp;<div id="answer' . $record['answer_id'] . '">' . $record['answer'] . '</div></div>
+                    </div>
+                    <div class="divTableRow">
+                        <div class="divTableCell">&nbsp;</div>
+                        <div class="divTableCell">&nbsp;<button type="button" class="btn btn-danger" id="' . $record['answer_id'] . '" onclick="deleteComment(this.id)">Delete Comment</button></div>
+                    </div>
+                </div>
+            </div>';
     }
     echo '</div>';
 ?>
