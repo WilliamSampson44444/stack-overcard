@@ -121,3 +121,16 @@ function getMyAnswers(cardName){
         } 
     });
 }
+
+function deleteComment(answID){
+    $.ajax({
+        url: 'deleteComment.php',
+        type: 'POST',
+        data: {answer_id: answID},
+        success: function(data) {
+            console.log(data);
+        }
+    });
+    getMyAnswers(document.getElementById("card_id").innerHTML);
+    return false;
+}

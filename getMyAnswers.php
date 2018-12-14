@@ -32,6 +32,7 @@
             echo '</div>';
             echo '<div id="answer' . $record['answer_id'] . '">' . $record['answer'] . '</div>';
         echo '</div>';
+        echo '<button type="button" class="btn btn-danger" id="' . $record['answer_id'] . '" onclick="deleteComment(this.id)">Delete Comment</button>';
     }
     echo '</div>';
 ?>
