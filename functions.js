@@ -113,3 +113,30 @@ function submitAnswer(){
     getAnswers(document.getElementById("card_id").innerHTML);
     return false;
 }
+
+function getMyAnswers(cardName){
+    $.ajax({
+        url: 'getMyAnswers.php',
+        type:'POST',
+        dataType: 'text',
+        data: {card: cardName},
+        success: function(data)
+        {
+            //console.log(data);
+            $('.modal-body').html(data);
+        } 
+    });
+}
+
+function deleteComment(answID){
+    $.ajax({
+        url: 'deleteComment.php',
+        type: 'POST',
+        data: {answer_id: answID},
+        success: function(data) {
+            console.log(data);
+        }
+    });
+    getMyAnswers(document.getElementById("card_id").innerHTML);
+    return false;
+}

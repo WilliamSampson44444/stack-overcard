@@ -47,7 +47,7 @@
           
           echo '<div class="flex-wrapper">';
           foreach ($records as $record){
-            echo '<button type="button" class="cards btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id ="' . $record['card_id'] . '" onclick="getAnswers(this.id);"><div class="cardText">' . $record['question'] . '</div></button>';
+            echo '<button type="button" class="cards btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id ="' . $record['card_id'] . '" onclick="getMyAnswers(this.id);"><div class="cardText">' . $record['question'] . '</div></button>';
           }
           echo '</div>';
         ?>
