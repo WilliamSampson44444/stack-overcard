@@ -14,7 +14,7 @@
 - Javascript
 - jQuery
 - MySql
-- Tootstrap
+- Bootstrap
 - Heroku
 
 
