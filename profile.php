@@ -52,6 +52,7 @@
             echo "<div id='profilePic'><img src='img/person.png' class='img-responsive img-circle' alt='person' width='200' height='200'></div>";
           }
           echo '<div id="profileName"><h2>' . $_SESSION['username'] . '</h2></div>';
+          echo '<h4>' . $_SESSION['user_bio'] . '</h4><br/> ';
           echo '</div>';
           
           echo '<div class="flex-wrapper">';
