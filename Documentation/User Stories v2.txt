@@ -1,0 +1,29 @@
+   _____ _              _       ____                                    _  
+  / ____| |            | |     / __ \                                  | | 
+ | (___ | |_  __ _  ___| | __ | |  | |__   _____ _ __ ___  __ _ _ __ __| | 
+  \___ \| __|/ _` |/ __| |/ / | |  | |\ \ / / _ \ '__/ __|/ _` | '__/ _` | 
+  ____) | |_| (_| | (__|   <  | |__| | \ V /  __/ | | (__| (_| | | | (_| | 
+ |_____/ \__|\__,_|\___|_|\_\  \____/   \_/ \___|_|  \___|\__,_|_|  \__,_| 
+
+ ==========================================================================
+ 
+ User stories: 
+
+ User can navigates “decks” and click a deck
+ to see cards. Clicking on a card reveals
+ answers and the rating for the answers.
+
+ User can login and navigate “decks” and click
+ a deck to see cards. Clicking on a card reveals
+ answers and the votes for the answers. User can
+ add an answer. 
+
+ User can login and navigate “decks” and click
+ a deck to see cards. Clicking on a card reveals
+ answers and the votes for the answers. User can 
+ vote on other answers.
+ 
+ User can login and navigate their profile, and click
+ cards. Clicking a card reveals the user's submitted 
+ answer for that card. User can choose to remove their
+ submitted answer. 
