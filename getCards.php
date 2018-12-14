@@ -11,6 +11,7 @@
     $statement->execute(); 
     $records = $statement->fetchAll();
     
+    echo '<button type="button" class="btn btn-light" style="float:left;" onclick="getDecks();"><i class="fa fa-arrow-left" style="font-size:36px;color:grey;"></i></button>';
     echo '<div class="flex-wrapper">';
     foreach ($records as $record){
         //var_dump($record);
