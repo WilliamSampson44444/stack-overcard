@@ -22,6 +22,6 @@
 
 
 
-<img src='https://imgur.com/YlNbOl7' width='' alt='screenshot' />
+[Imgur](https://i.imgur.com/YlNbOl7.png)
 
 
