@@ -5,7 +5,11 @@
   include_once 'sidebar.php';
   
   $id = $_SESSION['user_id'];
-  
+  (string)$profile_pic = $_SESSION['user_profile_pic'];
+
+
+
+  // Test URL
   $dbConn = getDatabaseConnection();
   $sql = "SELECT * FROM `cards` c JOIN `answers` a  ON c.card_id = a.card_id WHERE a.user_id = $id";
   $statement = $dbConn->prepare($sql);
@@ -41,7 +45,12 @@
       <div id="content">
         <?php
           echo '<div id="profile">';
-          echo '<div id="profilePic"><img src="img/person.png" class="img-responsive img-circle" alt="person" width="200" height="200"></div>';
+          if (strlen($profile_pic) > 1){
+             echo "<div id='profilePic'><img src='$profile_pic' class='img-responsive img-circle' alt='person' width='200' height='200'></div>";
+          } 
+          else {
+            echo "<div id='profilePic'><img src='img/person.png' class='img-responsive img-circle' alt='person' width='200' height='200'></div>";
+          }
           echo '<div id="profileName"><h2>' . $_SESSION['username'] . '</h2></div>';
           echo '</div>';
           

@@ -18,6 +18,8 @@ function validate($username, $password) {
         // login successful
         $_SESSION['user_id'] = $records[0]['user_id']; 
         $_SESSION['username'] = $records[0]['username']; 
+        $_SESSION['user_profile_pic'] = $records[0]['profile_pic_url'];
+        $_SESSION['user_bio'] = $records[0]['profile_bio'];
         header('Location: index.php');
     }  else {
         echo "<div class='error'>Username and password are invalid </div>"; 
