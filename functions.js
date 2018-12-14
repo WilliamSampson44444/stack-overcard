@@ -106,9 +106,11 @@ function submitAnswer(){
         success: function(data) {
             console.log(data);
         },
+        /* 
         complete: function(data,status) { //optional, used for debugging purposes
            alert(status);
         }
+        */
     });
     getAnswers(document.getElementById("card_id").innerHTML);
     return false;
