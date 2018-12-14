@@ -107,3 +107,17 @@ function submitAnswer(){
     getAnswers(document.getElementById("card_id").innerHTML);
     return false;
 }
+
+function getMyAnswers(cardName){
+    $.ajax({
+        url: 'getMyAnswers.php',
+        type:'POST',
+        dataType: 'text',
+        data: {card: cardName},
+        success: function(data)
+        {
+            //console.log(data);
+            $('.modal-body').html(data);
+        } 
+    });
+}
