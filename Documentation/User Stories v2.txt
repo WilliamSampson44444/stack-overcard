@@ -1,0 +1,26 @@
+   _____ _              _       ____                                    _  
+  / ____| |            | |     / __ \                                  | | 
+ | (___ | |_  __ _  ___| | __ | |  | |__   _____ _ __ ___  __ _ _ __ __| | 
+  \___ \| __|/ _` |/ __| |/ / | |  | |\ \ / / _ \ '__/ __|/ _` | '__/ _` | 
+  ____) | |_| (_| | (__|   <  | |__| | \ V /  __/ | | (__| (_| | | | (_| | 
+ |_____/ \__|\__,_|\___|_|\_\  \____/   \_/ \___|_|  \___|\__,_|_|  \__,_| 
+
+ ==========================================================================
+ 
+ User stories: 
+
+ As an unregistered user, I can view flashcard decks, 
+ select decks to view flashcards, and select flashcards to view answers.
+
+ As a registered user, I can view flashcard decks, 
+ select decks to view flashcards, and select flashcards to view answers.
+
+ As a registered user, I can add answers to flashcards.
+
+ As a registered user, I can vote on submitted answers on flashcards.
+
+ As a registered user, I can view my profile, which shows the cards where I have submitted answers.
+
+ As a registered user, I can view and delete my submitted answers.
+
+ 
