@@ -9,18 +9,21 @@
  
  User stories: 
 
- As an unregistered user, I can view flashcard decks, 
- select decks to view flashcards, and select flashcards to view answers.
+ User can navigates “decks” and click a deck
+ to see cards. Clicking on a card reveals
+ answers and the rating for the answers.
 
- As a registered user, I can view flashcard decks, 
- select decks to view flashcards, and select flashcards to view answers.
+ User can login and navigate “decks” and click
+ a deck to see cards. Clicking on a card reveals
+ answers and the votes for the answers. User can
+ add an answer. 
 
- As a registered user, I can add answers to flashcards.
-
- As a registered user, I can vote on submitted answers on flashcards.
-
- As a registered user, I can view my profile, which shows the cards where I have submitted answers.
-
- As a registered user, I can view and delete my submitted answers.
-
+ User can login and navigate “decks” and click
+ a deck to see cards. Clicking on a card reveals
+ answers and the votes for the answers. User can 
+ vote on other answers.
  
+ User can login and navigate their profile, and click
+ cards. Clicking a card reveals the user's submitted 
+ answer for that card. User can choose to remove their
+ submitted answer. 
