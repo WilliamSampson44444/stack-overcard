@@ -21,9 +21,12 @@ function getDecks(){
         type:'POST',
         dataType: 'text',
         data: {test: '1'},
+        beforeSend: function() {
+            $('#content').fadeOut(500);
+        },
         success: function(data)
         {
-            $('#content').html(data);
+            $('#content').hide().html(data).fadeIn(500);
         } 
     });
 }
@@ -34,9 +37,12 @@ function getCards(deckName){
         type:'POST',
         dataType: 'text',
         data: {deck: deckName},
+        beforeSend: function() {
+            $('#content').fadeOut(500);
+        },
         success: function(data)
         {
-            $('#content').html(data);
+            $('#content').hide().html(data).fadeIn(500);
         } 
     });
 }
@@ -50,7 +56,7 @@ function getAnswers(cardName){
         success: function(data)
         {
             //console.log(data);
-            $('.modal-body').html(data);
+            $('.modal-body').hide().html(data).fadeIn(500);
         } 
     });
 }
@@ -68,7 +74,7 @@ function upvote(cardID, answerID){
              console.log('running ');
             var aID = answerID;
             $('#answer' + aID).html(data);
-            $('#upvote' + aID).html('<i class="fa fa-arrow-up" style="font-size:36px;color:orange;"></i>');
+            $('#upvote' + aID).hide().html('<i class="fa fa-arrow-up" style="font-size:36px;color:orange;"></i>').fadeIn(500);
         } 
     });
 }
@@ -84,7 +90,7 @@ function downvote(cardID, answerID){
             console.log('running');
             var aID = answerID;
             $('#answer' + aID).html(data);
-            $('#downvote' + aID).html('<i class="fa fa-arrow-down" style="font-size:36px;color:blue;"></i>');
+            $('#downvote' + aID).hide().html('<i class="fa fa-arrow-down" style="font-size:36px;color:blue;"></i>').fadeIn(500);
         } 
     });
 }
